@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 
 app.get('/', function (request, response) {
     const url = request.query;
-    parser.parseRecipe('http://www.epicurious.com/recipes/food/views/The-Ultimate-Burger-353654')
+    parser.parseRecipe(url)
         .then((res) => {
             response.send(res);
         })
